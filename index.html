@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros para uma Biblioteca</title>
+</head>
+<body>
+    <h2 align="center">Cadastro de Livros para uma Biblioteca</h2>
+    <table align="center" bgcolor="lightblue">
+        <tr>
+            <td>
+                <form action="cadastrar.php" method="post" name="cadastro" oninput="x.value=parseInt(a.value);y.value=parseInt(b.value)+parseInt(c.value)">
+                    <fieldset>
+                        <legend> Informações de Cadastro </legend>
+                        <table cellspacing="5" cellpadding="5" align="center">
+                            <tr>
+                                <td><Label> Nome: </Label></td>
+                                <td><input type="text" name="nome" id="nome"
+                                size="30" maxlength="90" placeholder="Digite o nome do Livro" required></td>
+                            </tr>
+                            <tr>
+                                <td><label> Autor: </label></td>
+                                <td><input type="text" name="nome_autor"  size="30" id="nome_autor" maxlength="90" placeholder="Digite o nome do autor:" required></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Gênero do Livro: </label>
+                                </td>
+                                <td>
+                                    <select name="genero_livro" id="genero_livro" required>
+                                        <option value="" disabled selected>--Selecione--</option>
+                                        <option value="acao">Ação</option>
+                                        <option value="aventura">Aventura</option>
+                                        <option value="drama">Drama</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="fantasia">Fantasia</option>
+                                        <option value="ficcao-cientifica">Ficção Científica</option>
+                                        <option value="misterio">Mistério</option>
+                                        <option value="suspense">Suspense</option>
+                                        <option value="terror">Terror</option>
+                                        <option value="comedia">Comédia</option>
+                                        <option value="historico">Histórico</option>
+                                        <option value="biografia">Biografia</option>
+                                        <option value="poesia">Poesia</option>
+                                        <option value="autoajuda">Autoajuda</option>
+                                        <option value="ficcao-historica">Ficção Histórica</option>
+                                        <option value="distopia">Distopia</option>
+                                        <option value="utopia">Utopia</option>
+                                        <option value="mitologia">Mitologia</option>
+                                        <option value="religiao">Religião</option>
+                                        <option value="filosofia">Filosofia</option>
+                                        <option value="psicologia">Psicologia</option>
+                                        <option value="contos">Contos</option>
+                                        <option value="policial">Policial</option>
+                                        <option value="ensaios">Ensaios</option>
+                                        <option value="teatro">Teatro</option>
+                                        <option value="jovem-adulto">Jovem Adulto</option>
+                                        <option value="infantil">Infantil</option>
+                                        <option value="distopia">Distopia</option>
+                                        <option value="esoterismo">Esoterismo</option>
+                                        <option value="aventura-epica">Aventura Épica</option>
+                                        <option value="ciencia">Ciência</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Data de Publicação: </label>
+                                </td>
+                                <td>
+                                    <input type="date" id="data_publicacao" name="data_publicacao" min="1500-01-01" max="2024-12-31" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> ISBN: </label>
+                                </td>
+                                <td>
+                                    <input type="text" id="isbn" name="isbn" size="30" maxlength="25" placeholder=" Ex: 978-3-16-148410-0" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Número de Páginas </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="num_pag" name="num_pag" size="30" min="0" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Idioma: </label>
+                                    <td>
+                                        <select id="idioma" name="idioma" required>
+                                            <option value="" disabled selected>--Selecione--</option>
+                                            <option value="en">Inglês</option>
+                                            <option value="es">Espanhol</option>
+                                            <option value="fr">Francês</option>
+                                            <option value="de">Alemão</option>
+                                            <option value="it">Italiano</option>
+                                            <option value="ru">Russo</option>
+                                            <option value="zh-cn">Chinês (Simplificado)</option>
+                                            <option value="ja">Japonês</option>
+                                            <option value="ko">Coreano</option>
+                                            <option value="ar">Árabe</option>
+                                            <option value="hi">Hindi</option>
+                                            <option value="tr">Turco</option>
+                                            <option value="nl">Holandês</option>
+                                            <option value="sv">Sueco</option>
+                                            <option value="pl">Polonês</option>
+                                            <option value="da">Dinamarquês</option>
+                                            <option value="no">Norueguês</option>
+                                            <option value="fi">Finlandês</option>
+                                            <option value="el">Grego</option>
+                                            <option value="he">Hebraico</option>
+                                            <option value="cs">Tcheco</option>
+                                            <option value="hu">Húngaro</option>
+                                            <option value="ro">Romeno</option>
+                                            <option value="bg">Búlgaro</option>
+                                            <option value="uk">Ucraniano</option>
+                                            <option value="vi">Vietnamita</option>
+                                            <option value="th">Tailandês</option>
+                                            <option value="id">Indonésio</option>
+                                            <option value="ms">Malaio</option>
+                                            <option value="fa">Persa</option>
+                                            <option value="ta">Tâmil</option>
+                                            <option value="bn">Bengali</option>
+                                            <option value="ur">Urdu</option>                          
+                                    </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Disponibilidade: </label>
+                                </td>
+                                <td>
+                                    <label><input type="checkbox" nome="disponibilidade" value="disponivel">Disponível</label>
+                                    <label><input type="checkbox" nome="disponibilidade" value="emprestado">Emprestado</label>
+                                    <label><input type="checkbox" nome="disponibilidade" value="reservado">Reservado</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Formato: </label>
+                                </td>
+                                <td>
+                                    <label><input type="radio" name="livro_fisico" id="livro_fisico" required> Físico </label>
+                                    <label><input type="radio" id="ebook" name="ebook" required>E-Book</label>
+                                    <label><input type="radio" id="audiobook" name="audiobook" required>Audiobook</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label> Descrição: </label>
+                                </td>
+                                <td>
+                                    <textarea type="coment" name="coment" id="coment" cols="40" rows="6" maxlength="240" placeholder="Insira a descrição do livro"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Informações Adicionais</legend>
+                            <table cellspacing="5" cellpadding="5" align="center">
+                                <tr>
+                                    <td>
+                                        <label> Hora de Registro: </label>
+                                        <input type="time" name="horario" id="horario" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Data de Publicação </label>
+                                        <input type="date" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Avaliação do Livro: </label>
+                                        <input type="range" id="a" name="a" value="0" min="0" max="10">
+                                        <output name="x" for="a"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Cor da Capa: </label>
+                                        <input type="color" name="cor_capa_livro" id="cor_capa_livro">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Quantidade em Estoque: </label>
+                                        <input type="number" name="qtd_estoque" id="qtd_estoque">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> URL da Capa do Livro: </label>
+                                        <input type="url" name="url" id="url" size="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> E-mail de Contato do Editor: </label>
+                                        <input type="email" name="email" id="email" size="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Formato de Arquivo Digital: </label>
+                                        <input type="file" id="arquivo" name="arquivo">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Intervalo de Páginas: </label>
+                                        <input type="range" name="b" value="0" id="b" min="0" max="3000">
+                                        <input type="hidden" name="c" id="c" value="0" min="0" max="2000">
+                                        <output name="y" for="b c"></output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Palavras-chave: </label>
+                                        <input type="text" id="palavras_chave" name="palavras_chave" list="palavras_chave_opt" required>
+                                        <datalist id="palavras_chave_opt" required>
+                                            <option value="Fantasia">
+                                            <option value="Mistério">
+                                            <option value="Aventura">
+                                            <option value="Romance">
+                                            <option value="História">
+                                            <option value="Ciência">
+                                            <option value="Suspense">
+                                        </datalist>
+                                    </td>
+                                </tr>
+                                <tr align="center">
+                                    <td>
+                                        <button type="cadastrar.php" id="cadastrar" name="cadastrar">Cadastrar
+                                        </button>
+                                        <button type="reset" id="cadastrar" name="cadastrar">Cancelar</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                </form>    
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
